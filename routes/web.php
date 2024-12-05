@@ -15,23 +15,29 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\RoleandaccessController;
 use App\Http\Controllers\CryptocurrencyController;
+use App\Http\Controllers\SiteController;
 
-// Redireciona para login se não autenticado
-Route::get('/', function () {
-    return redirect()->route('signin');
+// Rotas para site público
+Route::prefix('/')->group(function () {
+    Route::controller(SiteController::class)->group(function () {
+        Route::get('/', 'index')->name('site.site');
+
+    });
 });
+
 
 // Autenticação
 Route::prefix('authentication')->group(function () {
     Route::controller(AuthenticationController::class)->group(function () {
-        Route::get('/signin', 'signIn')->name('signin'); // Exibe o formulário de login
-        Route::post('/signin', 'login')->name('login');  // Processa o login
+        Route::get('/signin', 'signIn')->name('signin');
+        Route::post('/signin', 'login')->name('login');
         Route::get('/signup', 'signUp')->name('signup');
         Route::post('/register', 'register')->name('register');
         Route::get('/forgotpassword', 'forgotPassword')->name('forgotPassword');
         Route::post('/logout', 'logout')->name('logout');
     });
 });
+
 // Dashboard (Protegido por autenticação)
 Route::middleware(['auth'])->prefix('dashboard')->group(function () {
     Route::controller(DashboardController::class)->group(function () {

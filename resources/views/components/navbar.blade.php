@@ -306,13 +306,16 @@
 
                 <div class="dropdown">
                     <button class="d-flex justify-content-center align-items-center rounded-circle" type="button" data-bs-toggle="dropdown">
+                        <!-- Exibe a imagem do usuário -->
                         <img src="{{ asset('assets/images/user.png') }}" alt="image" class="w-40-px h-40-px object-fit-cover rounded-circle">
                     </button>
                     <div class="dropdown-menu to-top dropdown-menu-sm">
                         <div class="py-12 px-16 radius-8 bg-primary-50 mb-16 d-flex align-items-center justify-content-between gap-2">
                             <div>
-                                <h6 class="text-lg text-primary-light fw-semibold mb-2">Shaidul Islam</h6>
-                                <span class="text-secondary-light fw-medium text-sm">Admin</span>
+                                <!-- Exibe o nome do usuário autenticado -->
+                                <h6 class="text-lg text-primary-light fw-semibold mb-2">{{ Auth::user()->nome }}</h6>
+                                <!-- Exibe o e-mail do usuário autenticado -->
+                                <span class="text-secondary-light fw-medium text-sm">{{ Auth::user()->email }}</span>
                             </div>
                             <button type="button" class="hover-text-danger">
                                 <iconify-icon icon="radix-icons:cross-1" class="icon text-xl"></iconify-icon>
@@ -320,18 +323,19 @@
                         </div>
                         <ul class="to-top-list">
                             <li>
-                                <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="{{ route('users.show', ['id' => 1]) }}">
-                                    <iconify-icon icon="solar:user-linear" class="icon text-xl"></iconify-icon> My Profile
+
+                                <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="{{ route('users.edit', ['id' => Auth::user()->id]) }}">
+                                    <iconify-icon icon="solar:user-linear" class="icon text-xl"></iconify-icon> Meu Perfil
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="">
-                                    <iconify-icon icon="tabler:message-check" class="icon text-xl"></iconify-icon> Inbox
+                                    <iconify-icon icon="tabler:message-check" class="icon text-xl"></iconify-icon> Caixa de Entrada
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="">
-                                    <iconify-icon icon="icon-park-outline:setting-two" class="icon text-xl"></iconify-icon> Setting
+                                    <iconify-icon icon="icon-park-outline:setting-two" class="icon text-xl"></iconify-icon> Configurações
                                 </a>
                             </li>
                             <li>
@@ -339,12 +343,13 @@
                                     @csrf
                                 </form>
                                 <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-danger d-flex align-items-center gap-3" href="javascript:void(0)" onclick="document.getElementById('logout-form').submit();">
-                                    <iconify-icon icon="lucide:power" class="icon text-xl"></iconify-icon> Log Out
+                                    <iconify-icon icon="lucide:power" class="icon text-xl"></iconify-icon> Sair
                                 </a>
                             </li>
                         </ul>
                     </div>
-                </div><!-- Profile dropdown end -->
+                </div>
+
             </div>
         </div>
     </div>
