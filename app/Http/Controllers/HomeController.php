@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class HomeController extends BaseController
 {
+
+    public function index()
+    {
+        return view( 'home');
+    }
+
     public function calendar()
     {
         return view('calendar');
