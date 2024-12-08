@@ -27,7 +27,7 @@
                 </a>
                 <ul class="sidebar-submenu">
                     <li>
-                        <a href="#"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Listagem de Aluguéis</a>
+                        <a href="{{ route('index') }}"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Listagem de Aluguéis</a>
                     </li>
                     <li>
                         <a href="#"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Adicionar Aluguel</a>
@@ -43,10 +43,14 @@
                 </a>
                 <ul class="sidebar-submenu">
                     <li>
-                        <a href="#"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Listagem de Veículos</a>
+                        <a href="{{ route('veiculos.index') }}">
+                            <i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Listagem de Veículos
+                        </a>
                     </li>
                     <li>
-                        <a href="#"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Adicionar Veículo</a>
+                        <a href="{{ route('veiculos.create') }}">
+                            <i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Adicionar Veículo
+                        </a>
                     </li>
                 </ul>
             </li>

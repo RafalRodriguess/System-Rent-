@@ -12,6 +12,7 @@ use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\VeiculoController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\RoleandaccessController;
 use App\Http\Controllers\CryptocurrencyController;
@@ -70,6 +71,21 @@ Route::middleware(['auth'])->prefix('users')->group(function () {
         Route::put('/{user}/update-password', 'updatePassword')->name('users.update-password');
     });
 });
+
+
+// Veiculos
+Route::middleware(['auth'])->prefix('veiculos')->group(function () {
+    Route::controller(VeiculoController::class)->group(function () {
+        Route::get('/', 'index')->name('veiculos.index');
+        Route::get('create', 'create')->name('veiculos.create');
+        Route::post('/', 'store')->name('veiculos.store');
+        Route::put('{id}', 'update')->name('veiculos.update');
+        Route::delete('{id}', 'destroy')->name('veiculos.destroy');
+        Route::get('{id}/edit', 'edit')->name('veiculos.edit');
+    });
+});
+
+
 
 // Relatórios
 Route::middleware(['auth'])->prefix('reports')->group(function () {

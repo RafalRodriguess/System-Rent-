@@ -9,7 +9,7 @@ class Veiculo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome', 'marca', 'modelo', 'ano', 'categoria', 'valor_diaria', 'status'];
+    protected $fillable = ['nome', 'marca', 'modelo', 'ano', 'categoria', 'valor_diaria', 'status','imagem'];
 
     public function alugueis()
     {
