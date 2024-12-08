@@ -5,22 +5,16 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class UserSeeder extends Seeder
+class DatabaseSeeder extends Seeder
 {
     public function run()
     {
+        // Exemplo de seeding de um usuário
         User::create([
-            'nome' => 'Admin',
-            'email' => 'admin@example.com',
-            'senha' => bcrypt('password'),
-            'tipo' => 'admin',
-        ]);
-
-        User::create([
-            'nome' => 'Operador',
-            'email' => 'operador@example.com',
-            'senha' => bcrypt('password'),
-            'tipo' => 'operador',
+            'nome' => 'Test User',  // Alterado de 'name' para 'nome'
+            'email' => 'test@example.com',
+            'password' => bcrypt('password'),  // Não se esqueça de usar bcrypt para a senha
         ]);
     }
 }
+

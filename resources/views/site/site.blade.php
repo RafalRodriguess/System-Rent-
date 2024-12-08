@@ -667,292 +667,52 @@
         </div>
     </div>
 
+
     <div class="swiper car-rentals-slider">
-        <div class="swiper-wrapper">
-            <!-- Gol -->
-            <div class="swiper-slide">
-                <div class="car-rentals-items">
-                    <div class="car-image">
-                        <img src="{{ asset( 'assets/site/gol.png ') }}" alt="Gol">
-                    </div>
-                    <div class="car-content">
-                        <div class="post-cat">
-                            Modelo 2024
+        <div class="swiper-wrapper" id="car-list">
+            @foreach($veiculos as $veiculo)
+                <div class="swiper-slide">
+                    <div class="car-rentals-items">
+                        <div class="car-image">
+                            <img src="{{ asset('storage/' . $veiculo->imagem) }}" alt="{{ $veiculo->nome }}">
                         </div>
-                        <div class="star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <span>2 Avaliações</span>
+                        <div class="car-content">
+                            <div class="post-cat">
+                                Modelo {{ $veiculo->ano }}
+                            </div>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>2 Avaliações</span>
+                            </div>
+                            <h4><a href="#">{{ $veiculo->marca }} {{ $veiculo->modelo }}</a></h4>
+                            <h6>R$ {{ number_format($veiculo->valor_diaria, 2, ',', '.') }} <span>/ Dia</span></h6>
+                            <div class="icon-items">
+                                <ul>
+                                    <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1"> 5 Assentos</li>
+                                    <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> 4 Portas</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1"> Manual ou Automático</li>
+                                    <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> Gasolina</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="theme-btn bg-color w-100 text-center">Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i></a>
                         </div>
-                        <h4><a href="#">Volkswagen Gol</a></h4>
-                        <h6>R$ 70.00 <span>/ Dia</span></h6>
-                        <div class="icon-items">
-                            <ul>
-                                <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1"> 5 Assentos</li>
-                                <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> 4 Portas</li>
-                            </ul>
-                            <ul>
-                                <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1"> Manual ou Automático</li>
-                                <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> Gasolina</li>
-                            </ul>
-                        </div>
-                        <a href="#" class="theme-btn bg-color w-100 text-center">Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- HB20 -->
-            <div class="swiper-slide">
-                <div class="car-rentals-items">
-                    <div class="car-image">
-                        <img src="{{ asset( 'assets/site/hb20.png ') }}" alt="HB20">
-                    </div>
-                    <div class="car-content">
-                        <div class="post-cat">
-                            Modelo 2024
-                        </div>
-                        <div class="star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <span>2 Avaliações</span>
-                        </div>
-                        <h4><a href="#">Hyundai HB20</a></h4>
-                        <h6>R$ 75.00 <span>/ Dia</span></h6>
-                        <div class="icon-items">
-                            <ul>
-                                <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1"> 5 Assentos</li>
-                                <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> 4 Portas</li>
-                            </ul>
-                            <ul>
-                                <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1"> Manual ou Automático</li>
-                                <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> Gasolina</li>
-                            </ul>
-                        </div>
-                        <a href="#" class="theme-btn bg-color w-100 text-center">Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i></a>
                     </div>
                 </div>
-            </div>
-
-            <!-- Creta -->
-            <div class="swiper-slide">
-                <div class="car-rentals-items">
-                    <div class="car-image">
-                        <img src="{{ asset( 'assets/site/creta.png ') }}" alt="Creta">
-                    </div>
-                    <div class="car-content">
-                        <div class="post-cat">
-                            Modelo 2024
-                        </div>
-                        <div class="star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <span>2 Avaliações</span>
-                        </div>
-                        <h4><a href="#">Hyundai Creta</a></h4>
-                        <h6>R$ 120.00 <span>/ Dia</span></h6>
-                        <div class="icon-items">
-                            <ul>
-                                <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1"> 5 Assentos</li>
-                                <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> 4 Portas</li>
-                            </ul>
-                            <ul>
-                                <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1"> Automático</li>
-                                <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> Gasolina</li>
-                            </ul>
-                        </div>
-                        <a href="#" class="theme-btn bg-color w-100 text-center">Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Onix -->
-            <div class="swiper-slide">
-                <div class="car-rentals-items">
-                    <div class="car-image">
-                        <img src="{{ asset( 'assets/site/onix.png ') }}" alt="Onix">
-                    </div>
-                    <div class="car-content">
-                        <div class="post-cat">
-                            Modelo 2024
-                        </div>
-                        <div class="star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <span>2 Avaliações</span>
-                        </div>
-                        <h4><a href="#">Chevrolet Onix</a></h4>
-                        <h6>R$ 70.00 <span>/ Dia</span></h6>
-                        <div class="icon-items">
-                            <ul>
-                                <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1"> 5 Assentos</li>
-                                <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> 4 Portas</li>
-                            </ul>
-                            <ul>
-                                <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1"> Manual ou Automático</li>
-                                <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> Gasolina</li>
-                            </ul>
-                        </div>
-                        <a href="#" class="theme-btn bg-color w-100 text-center">Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 
-    <div class="swiper car-rentals-slider">
-        <div class="swiper-wrapper">
-            <!-- Gol -->
-            <div class="swiper-slide">
-                <div class="car-rentals-items">
-                    <div class="car-image">
-                        <img src="{{ asset( 'assets/site/gol.png ') }}" alt="Gol">
-                    </div>
-                    <div class="car-content">
-                        <div class="post-cat">
-                            Modelo 2024
-                        </div>
-                        <div class="star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <span>2 Avaliações</span>
-                        </div>
-                        <h4><a href="#">Volkswagen Gol</a></h4>
-                        <h6>R$ 70.00 <span>/ Dia</span></h6>
-                        <div class="icon-items">
-                            <ul>
-                                <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1"> 5 Assentos</li>
-                                <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> 4 Portas</li>
-                            </ul>
-                            <ul>
-                                <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1"> Manual ou Automático</li>
-                                <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> Gasolina</li>
-                            </ul>
-                        </div>
-                        <a href="#" class="theme-btn bg-color w-100 text-center">Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- HB20 -->
-            <div class="swiper-slide">
-                <div class="car-rentals-items">
-                    <div class="car-image">
-                        <img src="{{ asset( 'assets/site/hb20.png ') }}" alt="HB20">
-                    </div>
-                    <div class="car-content">
-                        <div class="post-cat">
-                            Modelo 2024
-                        </div>
-                        <div class="star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <span>2 Avaliações</span>
-                        </div>
-                        <h4><a href="#">Hyundai HB20</a></h4>
-                        <h6>R$ 75.00 <span>/ Dia</span></h6>
-                        <div class="icon-items">
-                            <ul>
-                                <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1"> 5 Assentos</li>
-                                <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> 4 Portas</li>
-                            </ul>
-                            <ul>
-                                <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1"> Manual ou Automático</li>
-                                <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> Gasolina</li>
-                            </ul>
-                        </div>
-                        <a href="#" class="theme-btn bg-color w-100 text-center">Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Creta -->
-            <div class="swiper-slide">
-                <div class="car-rentals-items">
-                    <div class="car-image">
-                        <img src="{{ asset( 'assets/site/creta.png ') }}" alt="Creta">
-                    </div>
-                    <div class="car-content">
-                        <div class="post-cat">
-                            Modelo 2024
-                        </div>
-                        <div class="star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <span>2 Avaliações</span>
-                        </div>
-                        <h4><a href="#">Hyundai Creta</a></h4>
-                        <h6>R$ 120.00 <span>/ Dia</span></h6>
-                        <div class="icon-items">
-                            <ul>
-                                <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1"> 5 Assentos</li>
-                                <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> 4 Portas</li>
-                            </ul>
-                            <ul>
-                                <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1"> Automático</li>
-                                <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> Gasolina</li>
-                            </ul>
-                        </div>
-                        <a href="#" class="theme-btn bg-color w-100 text-center">Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Onix -->
-            <div class="swiper-slide">
-                <div class="car-rentals-items">
-                    <div class="car-image">
-                        <img src="{{ asset( 'assets/site/onix.png ') }}" alt="Onix">
-                    </div>
-                    <div class="car-content">
-                        <div class="post-cat">
-                            Modelo 2024
-                        </div>
-                        <div class="star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <span>2 Avaliações</span>
-                        </div>
-                        <h4><a href="#">Chevrolet Onix</a></h4>
-                        <h6>R$ 70.00 <span>/ Dia</span></h6>
-                        <div class="icon-items">
-                            <ul>
-                                <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1"> 5 Assentos</li>
-                                <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> 4 Portas</li>
-                            </ul>
-                            <ul>
-                                <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1"> Manual ou Automático</li>
-                                <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> Gasolina</li>
-                            </ul>
-                        </div>
-                        <a href="#" class="theme-btn bg-color w-100 text-center">Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    </div>
     </div>
 
 </section>
