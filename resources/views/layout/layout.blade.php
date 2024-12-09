@@ -39,6 +39,7 @@
             @endif
 
             @yield('content')
+            @yield('scripts')
 
         </div>
         <!-- ..::  footer  start ::.. -->
