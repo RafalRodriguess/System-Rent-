@@ -674,7 +674,7 @@
                 <div class="swiper-slide">
                     <div class="car-rentals-items">
                         <div class="car-image">
-                            <img src="{{ asset('storage/' . $veiculo->imagem) }}" alt="{{ $veiculo->nome }}">
+                        <img src="{{ asset('storage/' . $veiculo->imagem) }}" alt="{{ $veiculo->nome }}">
                         </div>
                         <div class="car-content">
                             <div class="post-cat">

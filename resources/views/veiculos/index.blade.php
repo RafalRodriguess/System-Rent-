@@ -56,7 +56,7 @@
                             </div>
 
                             <div class="ps-16 pb-16 pe-16 text-center mt--50">
-                                <img src="{{ url('storage/' . $veiculo->imagem) }}" alt="" class="max-w-170-px h-170-px object-fit-cover">
+                            <img src="{{ asset('storage/' . $veiculo->imagem) }}" alt="{{ $veiculo->nome }}">
                                 <h6 class="text-lg mb-0 mt-4">{{ $veiculo->nome }}</h6>
                                 <span class="text-secondary-light mb-16">{{ $veiculo->marca }}</span>
 
