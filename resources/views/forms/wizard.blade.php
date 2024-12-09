@@ -104,7 +104,7 @@
         });
         // =============================== Wizard Step Js End ================================
     </script>';
-                 
+
 @endphp
 
 @section('content')
@@ -894,7 +894,188 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <h6 class="mb-4 text-xl">Wizard with beside label</h6>
+                            <h6 class="mb-4 text-xl">Wizard with beside label</h6>                <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6 class="mb-4 text-xl">Wizard with beside label</h6>
+                                        <p class="text-neutral-500">Fill up your details and proceed next steps.</p>
+
+                                        <!-- Form Wizard Start -->
+                                        <div class="form-wizard">
+                                            <form action="#" method="post">
+                                                <div class="form-wizard-header overflow-x-auto scroll-sm pb-8 my-32">
+                                                    <ul class="list-unstyled form-wizard-list style-three">
+                                                        <li class="form-wizard-list__item d-flex align-items-center gap-8 active">
+                                                            <div class="form-wizard-list__line">
+                                                                <span class="count">1</span>
+                                                            </div>
+                                                            <span class="text text-xs fw-semibold">Order Details </span>
+                                                        </li>
+                                                        <li class="form-wizard-list__item d-flex align-items-center gap-8">
+                                                            <div class="form-wizard-list__line">
+                                                                <span class="count">2</span>
+                                                            </div>
+                                                            <span class="text text-xs fw-semibold">Manufactures</span>
+                                                        </li>
+                                                        <li class="form-wizard-list__item d-flex align-items-center gap-8">
+                                                            <div class="form-wizard-list__line">
+                                                                <span class="count">3</span>
+                                                            </div>
+                                                            <span class="text text-xs fw-semibold">Order Plan</span>
+                                                        </li>
+                                                        <li class="form-wizard-list__item d-flex align-items-center gap-8">
+                                                            <div class="form-wizard-list__line">
+                                                                <span class="count">4</span>
+                                                            </div>
+                                                            <span class="text text-xs fw-semibold">Completed</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <fieldset class="wizard-fieldset show">
+                                                    <h6 class="text-md text-neutral-500">Personal Information</h6>
+                                                    <div class="row gy-3">
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">First Name*</label>
+                                                            <div class="position-relative">
+                                                                <input type="text" class="form-control wizard-required" placeholder="Enter First Name" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Last Name*</label>
+                                                            <div class="position-relative">
+                                                                <input type="text" class="form-control wizard-required" placeholder="Enter Last Name" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label">Email*</label>
+                                                            <div class="position-relative">
+                                                                <input type="email" class="form-control wizard-required" placeholder="Enter Email" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Password*</label>
+                                                            <div class="position-relative">
+                                                                <input type="password" class="form-control wizard-required" placeholder="Enter Password" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Confirm Password*</label>
+                                                            <div class="position-relative">
+                                                                <input type="password" class="form-control wizard-required" placeholder="Enter Confirm Password" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group text-end">
+                                                            <button type="button" class="form-wizard-next-btn btn btn-primary-600 px-32">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+
+                                                <fieldset class="wizard-fieldset">
+                                                    <h6 class="text-md text-neutral-500">Account Information</h6>
+                                                    <div class="row gy-3">
+                                                        <div class="col-12">
+                                                            <label class="form-label">User Name*</label>
+                                                            <div class="position-relative">
+                                                                <input type="text" class="form-control wizard-required" placeholder="Enter User Name" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <label class="form-label">Card Number*</label>
+                                                            <div class="position-relative">
+                                                                <input type="number" class="form-control wizard-required" placeholder="Enter Card Number " required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <label class="form-label">Card Expiration(MM/YY)*</label>
+                                                            <div class="position-relative">
+                                                                <input type="number" class="form-control wizard-required" placeholder="Enter Card Expiration" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <label class="form-label">CVV Number*</label>
+                                                            <div class="position-relative">
+                                                                <input type="number" class="form-control wizard-required" placeholder="CVV Number" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <label class="form-label">Password*</label>
+                                                            <div class="position-relative">
+                                                                <input type="password" class="form-control wizard-required" placeholder="Enter Password" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group d-flex align-items-center justify-content-end gap-8">
+                                                            <button type="button" class="form-wizard-previous-btn btn btn-neutral-500 border-neutral-100 px-32">Back</button>
+                                                            <button type="button" class="form-wizard-next-btn btn btn-primary-600 px-32">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+
+                                                <fieldset class="wizard-fieldset">
+                                                    <h6 class="text-md text-neutral-500">Bank Information</h6>
+                                                    <div class="row gy-3">
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Bank Name*</label>
+                                                            <div class="position-relative">
+                                                                <input type="text" class="form-control wizard-required" placeholder="Enter Bank Name" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Branch Name*</label>
+                                                            <div class="position-relative">
+                                                                <input type="text" class="form-control wizard-required" placeholder="Enter Branch Name" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Account Name*</label>
+                                                            <div class="position-relative">
+                                                                <input type="text" class="form-control wizard-required" placeholder="Enter Account Name" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <label class="form-label">Account Number*</label>
+                                                            <div class="position-relative">
+                                                                <input type="number" class="form-control wizard-required" placeholder="Enter Account Number" required>
+                                                                <div class="wizard-form-error"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group d-flex align-items-center justify-content-end gap-8">
+                                                            <button type="button" class="form-wizard-previous-btn btn btn-neutral-500 border-neutral-100 px-32">Back</button>
+                                                            <button type="button" class="form-wizard-next-btn btn btn-primary-600 px-32">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+
+                                                <fieldset class="wizard-fieldset">
+                                                    <div class="text-center mb-40">
+                                                        <img src="{{ asset('assets/images/gif/success-img3.gif') }}" alt="" class="gif-image mb-24">
+                                                        <h6 class="text-md text-neutral-600">Congratulations </h6>
+                                                        <p class="text-neutral-400 text-sm mb-0">Well done! You have successfully completed.</p>
+                                                    </div>
+                                                    <div class="form-group d-flex align-items-center justify-content-end gap-8">
+                                                        <button type="button" class="form-wizard-previous-btn btn btn-neutral-500 border-neutral-100 px-32">Back</button>
+                                                        <button type="button" class="form-wizard-submit btn btn-primary-600 px-32">Publish</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <!-- Form Wizard End -->
+                                    </div>
+                                </div>
+                            </div>
                             <p class="text-neutral-500">Fill up your details and proceed next steps.</p>
 
                             <!-- Form Wizard Start -->

@@ -20,6 +20,9 @@ class VeiculoController extends Controller
 
     public function store(Request $request)
     {
+        \Log::info('Início do processo de criação de veículo');
+
+        // Validação dos campos
         $request->validate([
             'nome' => 'required|string|max:255',
             'marca' => 'required|string|max:255',
@@ -29,11 +32,21 @@ class VeiculoController extends Controller
             'valor_diaria' => 'required|numeric',
             'status' => 'required|in:disponivel,alugado,manutencao',
             'imagem' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'ar_condicionado' => 'required|boolean',
+            'combustivel' => 'required|in:gasolina,alcool,flex',
+            'portas' => 'required|in:2,4',
+            'assentos' => 'required|in:5,7',
+            'caucao' => 'required|numeric',
         ]);
 
+        \Log::info('Validação de entrada concluída');
+
+        // Processamento da imagem
         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
             $imagemPath = $request->file('imagem')->store('veiculos', 'public');
+            \Log::info('Imagem armazenada com sucesso: ' . $imagemPath);
         } else {
+            \Log::error('Erro ao fazer upload da imagem.');
             return back()->withErrors(['imagem' => 'Erro ao fazer upload da imagem.']);
         }
 
@@ -47,13 +60,22 @@ class VeiculoController extends Controller
                 'valor_diaria' => $request->valor_diaria,
                 'status' => $request->status,
                 'imagem' => $imagemPath,
+                'ar_condicionado' => $request->ar_condicionado,
+                'combustivel' => $request->combustivel,
+                'portas' => $request->portas,
+                'assentos' => $request->assentos,
+                'caucao' => $request->caucao,
             ]);
 
+            \Log::info('Veículo criado com sucesso');
             return redirect()->route('veiculos.index')->with('success', 'Veículo criado com sucesso!');
         } catch (\Exception $e) {
+            \Log::error('Erro ao criar o veículo: ' . $e->getMessage());
             return back()->withErrors(['error' => 'Houve um erro ao criar o veículo.']);
         }
     }
+
+
 
     public function show(Veiculo $veiculo)
     {

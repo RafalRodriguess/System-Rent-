@@ -692,14 +692,22 @@
                             <h6>R$ {{ number_format($veiculo->valor_diaria, 2, ',', '.') }} <span>/ Dia</span></h6>
                             <div class="icon-items">
                                 <ul>
-                                    <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1"> 5 Assentos</li>
-                                    <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> 4 Portas</li>
+                                    <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1">{{ $veiculo->assentos}} Assentos</li>
+                                    <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> {{ $veiculo->portas}}Portas</li>
+                                    <li>
+                                        <img src="assets/site/img/car/door.svg" alt="Portas" class="me-1">
+                                        {{ $veiculo->ar_condicionado == 1 ? 'Sim' : 'Não' }}
+                                    </li>
+
                                 </ul>
                                 <ul>
                                     <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1"> Manual ou Automático</li>
-                                    <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> Gasolina</li>
+
+                                    <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> {{ $veiculo->combustivel}}</li>
                                 </ul>
+
                             </div>
+                            <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1">Garantia: R$ {{ $veiculo->caucao }}</li>
                             <a href="#" class="theme-btn bg-color w-100 text-center">Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i></a>
                         </div>
                     </div>

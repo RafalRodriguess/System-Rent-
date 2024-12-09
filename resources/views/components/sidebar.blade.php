@@ -47,11 +47,7 @@
                             <i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Listagem de Veículos
                         </a>
                     </li>
-                    <li>
-                        <a href="{{ route('veiculos.create') }}">
-                            <i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Adicionar Veículo
-                        </a>
-                    </li>
+
                 </ul>
             </li>
 
