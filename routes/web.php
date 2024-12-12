@@ -17,15 +17,27 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\RoleandaccessController;
 use App\Http\Controllers\CryptocurrencyController;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\AlugueisController;
 
 // Rotas para site público
 Route::prefix('/')->group(function () {
     Route::controller(SiteController::class)->group(function () {
         Route::get('/', 'index')->name('site.site');
-
+        Route::get('/login', 'viewlogin')->name('site.viewlogin');
+        Route::get('/register', 'viewregister')->name('site.viewregister');
+        Route::post('/cadastro', 'cadastro')->name('site.cadastro');
+        Route::post('/logar', 'login')->name('site.login');
+        Route::post('/logout', 'sair')->name('site.logout');
     });
 });
 
+// // Alugueis Publico
+ Route::prefix('/aluguel')->group(function () {
+     Route::controller(AlugueisController::class)->group(function () {
+         Route::get('/', 'index')->name('site.aluguel');
+     });
+ });
 
 // Autenticação
 Route::prefix('authentication')->group(function () {
@@ -53,6 +65,13 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
         Route::get('/index9', 'index9')->name('index9');
         Route::get('/index10', 'index10')->name('index10');
         Route::get('/wallet', 'wallet')->name('wallet');
+    });
+});
+
+// Clientes
+Route::middleware(['auth'])->prefix('clientes')->group(function () {
+    Route::controller(ClienteController::class)->group(function () {
+        Route::get('/', 'index')->name('clientes.index');
     });
 });
 
