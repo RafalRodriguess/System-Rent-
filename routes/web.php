@@ -19,6 +19,8 @@ use App\Http\Controllers\CryptocurrencyController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\AlugueisController;
+use App\Http\Controllers\ReservaController;
+
 
 // Rotas para site público
 Route::prefix('/')->group(function () {
@@ -33,11 +35,15 @@ Route::prefix('/')->group(function () {
 });
 
 // // Alugueis Publico
- Route::prefix('/aluguel')->group(function () {
-     Route::controller(AlugueisController::class)->group(function () {
-         Route::get('/', 'index')->name('site.aluguel');
-     });
- });
+Route::prefix('/aluguel')->group(function () {
+    Route::controller(AlugueisController::class)->group(function () {
+        Route::get('/', 'index')->name('site.aluguel.index');
+        Route::post('/', 'store')->name('site.aluguel.store');
+        Route::get('/create', 'create')->name('site.aluguel.create');
+        Route::get('/{id}', 'show')->name('site.aluguel.show');
+    });
+});
+
 
 // Autenticação
 Route::prefix('authentication')->group(function () {
@@ -72,9 +78,15 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
 Route::middleware(['auth'])->prefix('clientes')->group(function () {
     Route::controller(ClienteController::class)->group(function () {
         Route::get('/', 'index')->name('clientes.index');
+        Route::get('/{id}', 'show')->name('clientes.show'); // Rota para exibir os detalhes do cliente
     });
 });
 
+Route::middleware(['auth'])->prefix('clientes')->group(function () {
+    Route::controller(SiteController::class)->group(function () {
+        Route::get('/{id}', 'Adminshow')->name('clientes.show');
+    });
+});
 // Usuários
 Route::middleware(['auth'])->prefix('users')->group(function () {
     Route::controller(UsersController::class)->group(function () {
@@ -101,9 +113,19 @@ Route::middleware(['auth'])->prefix('veiculos')->group(function () {
         Route::put('{id}', 'update')->name('veiculos.update');
         Route::delete('{id}', 'destroy')->name('veiculos.destroy');
         Route::get('{id}/edit', 'edit')->name('veiculos.edit');
+        Route::get('/{id}', 'show')->name('veiculos.show');
+
     });
 });
 
+// Alugueis
+Route::middleware(['auth'])->prefix('alugueis')->group(function () {
+    Route::controller(AlugueisController::class)->group(function () {
+        Route::get('/', 'dashboardindex')->name('alugueis.index');
+        Route::delete('{id}', 'destroy')->name('alugueis.destroy');
+        Route::get('/{id}', 'showAdmin')->name('alugueis.show');
+    });
+});
 
 
 // Relatórios

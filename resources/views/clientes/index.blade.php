@@ -1,7 +1,7 @@
 @extends('layout.layout')
 @php
-    $title='Usuários';
-    $subTitle = 'Lista de Usuários';
+    $title='Clientes';
+    $subTitle = 'Lista de Clientes';
     $script = '<script>
         $(".remove-item-btn").on("click", function() {
             $(this).closest("tr").addClass("d-none")
@@ -27,10 +27,7 @@
                     </button>
                 </form>
             </div>
-            <a href="{{ route('users.create') }}" class="btn btn-success text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2">
-                <iconify-icon icon="ic:baseline-plus" class="icon text-xl line-height-1"></iconify-icon>
-                Adicionar Usuário
-            </a>
+           
         </div>
         <div class="card-body p-24">
             <div class="table-responsive scroll-sm">
@@ -61,9 +58,9 @@
                             </td>
                             <td class="text-center">
                                 <div class="d-flex align-items-center gap-10 justify-content-center">
-                                    <a href="{{ route('users.show', $cliente->id) }}" class="bg-info-focus bg-hover-info-200 text-info-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle">
-                                        <iconify-icon icon="majesticons:eye-line" class="icon text-xl"></iconify-icon>
-                                    </a>
+                                <a href="{{ route('clientes.show', ['id' => $cliente->id]) }}">Ver Cliente</a>
+
+
                                     <a href="{{ route('users.edit', $cliente->id) }}" class="bg-success-focus bg-hover-success-200 text-success-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle">
                                         <iconify-icon icon="lucide:edit" class="menu-icon"></iconify-icon>
                                     </a>

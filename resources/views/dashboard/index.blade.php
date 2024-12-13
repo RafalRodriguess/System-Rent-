@@ -15,7 +15,7 @@
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
                     <div>
                         <p class="fw-medium text-primary-light mb-1">Total de Veículos</p>
-                        <h6 class="mb-0">150</h6>
+                        <h6 class="mb-0">{{ $totalVeiculos }}</h6>
                     </div>
                     <div class="w-50-px h-50-px bg-cyan rounded-circle d-flex justify-content-center align-items-center">
                         <iconify-icon icon="mdi:car-sports" class="text-white text-2xl mb-0"></iconify-icon>
@@ -36,7 +36,7 @@
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
                     <div>
                         <p class="fw-medium text-primary-light mb-1">Total de Aluguéis</p>
-                        <h6 class="mb-0">1.200</h6>
+                        <h6 class="mb-0">{{ $totalAlugueis }}</h6>
                     </div>
                     <div class="w-50-px h-50-px bg-purple rounded-circle d-flex justify-content-center align-items-center">
                         <iconify-icon icon="mdi:clipboard-list" class="text-white text-2xl mb-0"></iconify-icon>
@@ -56,11 +56,11 @@
             <div class="card-body p-20">
                 <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
                     <div>
-                        <p class="fw-medium text-primary-light mb-1">Veículos Disponíveis</p>
-                        <h6 class="mb-0">80</h6>
+                        <p class="fw-medium text-primary-light mb-1">Total de Clientes</p>
+                        <h6 class="mb-0">{{ $totalClientes }}</h6>
                     </div>
                     <div class="w-50-px h-50-px bg-info rounded-circle d-flex justify-content-center align-items-center">
-                        <iconify-icon icon="mdi:car-key" class="text-white text-2xl mb-0"></iconify-icon>
+                        <iconify-icon icon="mdi:account-group" class="text-white text-2xl mb-0"></iconify-icon>
                     </div>
                 </div>
                 <p class="fw-medium text-sm text-primary-light mt-12 mb-0 d-flex align-items-center gap-2">
@@ -72,49 +72,8 @@
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card shadow-none border bg-gradient-start-4 h-100">
-            <div class="card-body p-20">
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
-                    <div>
-                        <p class="fw-medium text-primary-light mb-1">Renda Total</p>
-                        <h6 class="mb-0">€ 25.000</h6>
-                    </div>
-                    <div class="w-50-px h-50-px bg-success-main rounded-circle d-flex justify-content-center align-items-center">
-                        <iconify-icon icon="mdi:currency-eur" class="text-white text-2xl mb-0"></iconify-icon>
-                    </div>
-                </div>
-                <p class="fw-medium text-sm text-primary-light mt-12 mb-0 d-flex align-items-center gap-2">
-                    <span class="d-inline-flex align-items-center gap-1 text-success-main">
-                        <iconify-icon icon="bxs:up-arrow" class="text-xs"></iconify-icon> +€5.000
-                    </span>
-                    Últimos 30 dias
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card shadow-none border bg-gradient-start-5 h-100">
-            <div class="card-body p-20">
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
-                    <div>
-                        <p class="fw-medium text-primary-light mb-1">Despesas Totais</p>
-                        <h6 class="mb-0">€ 15.000</h6>
-                    </div>
-                    <div class="w-50-px h-50-px bg-red rounded-circle d-flex justify-content-center align-items-center">
-                        <iconify-icon icon="mdi:file-document-outline" class="text-white text-2xl mb-0"></iconify-icon>
-                    </div>
-                </div>
-                <p class="fw-medium text-sm text-primary-light mt-12 mb-0 d-flex align-items-center gap-2">
-                    <span class="d-inline-flex align-items-center gap-1 text-success-main">
-                        <iconify-icon icon="bxs:up-arrow" class="text-xs"></iconify-icon> +€2.000
-                    </span>
-                    Últimos 30 dias
-                </p>
-            </div>
-        </div>
-    </div>
 </div>
+
 
 <!-- Estatísticas e Gráficos -->
 

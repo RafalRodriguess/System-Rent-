@@ -19,6 +19,19 @@
                 </a>
             </li>
 
+               <!-- Users -->
+               <li class="dropdown">
+                <a href="javascript:void(0)">
+                    <iconify-icon icon="flowbite:users-group-outline" class="menu-icon"></iconify-icon>
+                    <span>Clientes</span>
+                </a>
+                <ul class="sidebar-submenu">
+                    <li>
+                        <a href="{{ route('clientes.index') }}"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Listagem de Clientes</a>
+                    </li>
+                </ul>
+            </li> 
+
             <!-- Aluguéis -->
             <li class="dropdown">
                 <a href="javascript:void(0)">
@@ -27,11 +40,9 @@
                 </a>
                 <ul class="sidebar-submenu">
                     <li>
-                        <a href="{{ route('index') }}"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Listagem de Aluguéis</a>
+                        <a href="{{ route('alugueis.index') }}"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Listagem de Aluguéis</a>
                     </li>
-                    <li>
-                        <a href="#"><i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Adicionar Aluguel</a>
-                    </li>
+                  
                 </ul>
             </li>
 

@@ -11,6 +11,7 @@ class VeiculoController extends Controller
 {
     public function index()
     {
+        
         $veiculos = Veiculo::paginate(4);
         return view('veiculos.index', compact('veiculos'));
     }
@@ -89,10 +90,13 @@ class VeiculoController extends Controller
 
 
 
-    public function show(Veiculo $veiculo)
+    public function show($id)
     {
+        $veiculo = Veiculo::with('alugueis.cliente')->findOrFail($id);
+    
         return view('veiculos.show', compact('veiculo'));
     }
+    
 
     public function edit($id)
     {

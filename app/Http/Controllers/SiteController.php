@@ -9,13 +9,19 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\Aluguel;
+use Carbon\Carbon;
 class SiteController extends Controller
 {
     public function index()
     {
+        
+        $alugueis = Aluguel::all();
+        $clientes = Cliente::all();
         $veiculos = Veiculo::all();
-        return view('site.site', compact('veiculos'));
+        $veiculo = null; 
+
+        return view('site.site', compact('alugueis', 'clientes', 'veiculos'));
     }
 
     public function viewlogin()
@@ -44,11 +50,10 @@ class SiteController extends Controller
                 'status' => 'ativo',
             ]);
 
-            Log::info("Cliente criado com sucesso.", ['Cliente' => $clientes]);
-
+           
             return redirect()->route('site.site')->with('success', 'Cadastro realizado com sucesso!');
         } catch (\Exception $e) {
-            Log::error('Erro ao criar cliente.', ['error' => $e->getMessage()]);
+           
             return back()->withErrors(['error' => 'Houve um erro ao criar o cliente.']);
         }
     }
@@ -61,7 +66,6 @@ class SiteController extends Controller
             'senha' => 'required',
         ]);
 
-        Log::info("Tentando fazer login com o email: " . $credentials['email']);
 
         // Verificar se existe um cliente com o email fornecido
         $clientes = Cliente::where('email', $credentials['email'])->first();
@@ -88,4 +92,17 @@ class SiteController extends Controller
 
         return redirect()->route('site.site');
     }
+
+    public function Adminshow($id)
+    {
+        try {
+            $cliente = Cliente::with('alugueis', 'veiculos')->findOrFail($id);
+    
+            return view('clientes.show', compact('cliente'));
+        } catch (\Exception $e) {
+            \Log::error('Erro ao exibir os detalhes do cliente: ' . $e->getMessage());
+            return redirect()->route('clientes.index')->withErrors(['error' => 'Cliente não encontrado.']);
+        }
+    }
+    
 }

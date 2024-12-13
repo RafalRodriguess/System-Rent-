@@ -65,23 +65,23 @@
                                         <h6 class="text-md mb-0">{{ $veiculo-> modelo}}</h6>
                                         <span class="text-secondary-light text-sm mb-0">{{ $veiculo->ano }}</span>
                                     </div>
-                                    <div  class="text-center w-50">
-                                        <h6 class="text-md mb-0">Valor da Diaria <br> R${{ $veiculo->valor_diaria }}</h6>
-                                        @if($veiculo->status == 'disponivel')
-                                        <span style="color: green"; class="text-secondary-light text-sm mb-0">{{$veiculo->status}}</span>
-                                        @elseif($veiculo->status == 'alugado')
-                                        <span style="color: red"; class="text-secondary-light text-sm mb-0">{{$veiculo->status}}</span>
-                                        @elseif($veiculo->status == 'manutencao')
-                                        <span  style="color: black"; class="text-secondary-light text-sm mb-0">{{$veiculo->status}}</span>
-                                        @endif
+                                    <div class="text-center w-50">
+    <h6 class="text-md mb-0">Valor da Diária <br> R$ {{ number_format($veiculo->valor_diaria, 2, ',', '.') }}</h6>
+    @if($veiculo->status === 'disponivel')
+        <span class="text-secondary-light text-sm mb-0" style="color: green;">{{ ucfirst($veiculo->status) }}</span>
+    @elseif($veiculo->status === 'alugado')
+        <span class="text-secondary-light text-sm mb-0" style="color: red;">{{ ucfirst($veiculo->status) }}</span>
+    @elseif($veiculo->status === 'manutencao')
+        <span class="text-secondary-light text-sm mb-0" style="color: black;">{{ ucfirst($veiculo->status) }}</span>
+    @endif
+</div>
 
-
-                                    </div>
                                 </div>
-                                <a href="#" class="bg-primary-50 text-primary-600 bg-hover-primary-600 hover-text-white p-10 text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center justify-content-center mt-16 fw-medium gap-2 w-100">
-                                    Ver Alugueis
-                                    <iconify-icon icon="solar:alt-arrow-right-linear" class="icon text-xl line-height-1"></iconify-icon>
-                                </a>
+                                <a href="{{ route('veiculos.show', $veiculo->id) }}" class="bg-primary-50 text-primary-600 bg-hover-primary-600 hover-text-white p-10 text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center justify-content-center mt-16 fw-medium gap-2 w-100">
+    Ver Alugueis
+    <iconify-icon icon="solar:alt-arrow-right-linear" class="icon text-xl line-height-1"></iconify-icon>
+</a>
+
                             </div>
                         </div>
                     </div>
