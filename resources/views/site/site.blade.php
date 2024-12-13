@@ -1,310 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<!--<< Header Area >>-->
-
-<head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="rafa" content="rafa">
-    <meta name="description" content="Localiza">
-    <!-- ======== Título da página ============ -->
-    <title>Localiza Veiculos</title>
-    <!--<< Favicon >>-->
-    <link rel="icon" href="{{ asset('assets/images/favicon.jpeg') }}" type="image/jpeg">
-    <!--<< Styles >>-->
-    <link rel="stylesheet" href="{{ asset('assets/site/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/site/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/site/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/site/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/site/css/meanmenu.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/site/css/datepickerboot.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/site/css/swiper-bundle.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/site/css/nice-select.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/site/css/main.css') }}">
-
-</head>
-
-<body>
-
-    <body>
-
-
-
-
-        <!-- Offcanvas Area Start -->
-        <div class="fix-area">
-            <div class="offcanvas__info">
-                <div class="offcanvas__wrapper">
-                    <div class="offcanvas__content">
-                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
-                            <div class="offcanvas__logo">
-                                <a href="#">
-                                    <img src="{{ asset('assets/images/localiza.png') }}" alt="logo-img">
-
-                                </a>
-                            </div>
-                            <div class="offcanvas__close">
-                                <button>
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <p class="text d-none d-xl-block">
-                            Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
-                        </p>
-                        <div class="mobile-menu fix mb-3"></div>
-                        <div class="offcanvas__contact">
-                            <h4>Contact Info</h4>
-                            <ul>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon">
-                                        <i class="fal fa-map-marker-alt"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a target="_blank" href="#">Main Street, Melbourne, Australia</a>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon mr-15">
-                                        <i class="fal fa-envelope"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a href="mailto:info@example.com"><span class="mailto:info@example.com">info@example.com</span></a>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon mr-15">
-                                        <i class="fal fa-clock"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a target="_blank" href="#">Mod-friday, 09am -05pm</a>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon mr-15">
-                                        <i class="far fa-phone"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a href="tel:+11002345909">+11002345909</a>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="header-button mt-4">
-                                <a href="#" class="theme-btn text-center">
-                                    <span>Get A Quote<i class="fa-solid fa-arrow-right-long"></i></span>
-                                </a>
-                            </div>
-                            <div class="social-icon d-flex align-items-center">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="offcanvas__overlay"></div>
-
-        <!-- Área Offcanvas Início -->
-        <div class="fix-area">
-            <div class="offcanvas__info">
-                <div class="offcanvas__wrapper">
-                    <div class="offcanvas__content">
-                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
-                            <div class="offcanvas__logo">
-                                <a href="#">
-                                    <img src="{{ asset('assets/images/localiza.png') }}" alt="logo-img">
-
-                                </a>
-                            </div>
-                            <div class="offcanvas__close">
-                                <button>
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <p class="text d-none d-xl-block">
-                            Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
-                        </p>
-                        <div class="mobile-menu fix mb-3"></div>
-                        <div class="offcanvas__contact">
-                            <h4>Informações de Contato</h4>
-                            <ul>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon">
-                                        <i class="fal fa-map-marker-alt"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a target="_blank" href="#">Rua Principal, Melbourne, Austrália</a>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon mr-15">
-                                        <i class="fal fa-envelope"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a href="mailto:info@example.com"><span class="mailto:info@example.com">info@example.com</span></a>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon mr-15">
-                                        <i class="fal fa-clock"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a target="_blank" href="#">Segunda a sexta, 09h - 17h</a>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon mr-15">
-                                        <i class="far fa-phone"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a href="tel:+11002345909">+11002345909</a>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="header-button mt-4">
-                                <a href="#" class="theme-btn text-center">
-                                    <span>Obter uma cotação<i class="fa-solid fa-arrow-right-long"></i></span>
-                                </a>
-                            </div>
-                            <div class="social-icon d-flex align-items-center">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="offcanvas__overlay"></div>
-
-
-        <!-- Seção de Cabeçalho Início -->
-        <header id="header-sticky" class="header-1">
-            <div class="container-fluid">
-                <div class="mega-menu-wrapper">
-                    <div class="header-main">
-                        <div class="header-left">
-                            <div class="logo">
-                                <a href="#" class="header-logo">
-                                    <img src="{{ asset('assets/images/localiza.png') }}" alt="logo-img">
-                                </a>
-                            </div>
-                            <div class="mean__menu-wrapper">
-                                <div class="main-menu">
-                                    <nav id="mobile-menu">
-                                        <ul>
-                                            <li class="has-dropdown active menu-thumb">
-                                                <a href="#">
-                                                    Início
-                                                    <i class="fas fa-angle-down"></i>
-                                                </a>
-                                                <ul class="submenu">
-                                                    <li><a href="#">Início 01</a></li>
-                                                    <li><a href="#">Início 02</a></li>
-                                                    <li><a href="#">Início 03</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">Sobre Nós</a>
-                                            </li>
-                                            <li class="has-dropdown">
-                                                <a href="#">
-                                                    Páginas
-                                                    <i class="fas fa-angle-down"></i>
-                                                </a>
-                                                <ul class="submenu">
-                                                    <li><a href="#">Galeria</a></li>
-                                                    <li><a href="#">Perguntas Frequentes</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Carros
-                                                    <i class="fas fa-angle-down"></i>
-                                                </a>
-                                                <ul class="submenu">
-                                                    <li><a href="#">Grade de Carros</a></li>
-                                                    <li><a href="#">Lista de Carros</a></li>
-                                                    <li><a href="#">Carros com Barra Lateral</a></li>
-                                                    <li><a href="#">Detalhes do Carro</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    Blog
-                                                    <i class="fas fa-angle-down"></i>
-                                                </a>
-                                                <ul class="submenu">
-                                                    <li><a href="#">Blog</a></li>
-                                                    <li><a href="#">Detalhes do Blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">Contato</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-right d-flex justify-content-end align-items-center">
-                            <div class="icon-items">
-                                <div class="icon">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div class="content">
-                                    <p>Ligue a qualquer momento</p>
-                                    <h6><a href="tel:+9288009850">+92 (8800) - 9850</a></h6>
-                                </div>
-                            </div>
-                            <a href="#0" class="search-trigger search-icon"><i class="fa-regular fa-magnifying-glass"></i></a>
-                            <div class="header-button">
-
-                                @if(auth()->guard('clientes')->check())
-                                <!-- Exibe o botão de Logout se o usuário estiver autenticado -->
-                                <form action="{{ route('site.logout') }}" method="POST" style="display: inline;">
-                                    @csrf
-                                    <button type="submit" class="header-btn">Logout</button>
-                                </form>
-                                @else
-                                <!-- Exibe o botão de Login se o usuário não estiver autenticado -->
-                                <a href="{{ route('site.viewlogin') }}" class="header-btn">Login</a>
-                                @endif
-                            </div>
-
-                            <div class="header__hamburger d-xl-none my-auto">
-                                <div class="sidebar__toggle">
-                                    <i class="fas fa-bars"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-
-        <!-- Área de Pesquisa Início -->
-        <div class="search-wrap">
-            <div class="search-inner">
-                <i class="fas fa-times search-close" id="search-close"></i>
-                <div class="search-cell">
-                    <form method="get">
-                        <div class="search-field-holder">
-                            <input type="search" class="main-search-input" placeholder="Pesquisar...">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+@extends('layout.site')
+@section('content')
 
         <section class="hero-section hero-1 fix">
             <div class="array-button">
@@ -665,257 +360,121 @@
             </div>
         </section>
 
-        <!-- Seção de Aluguel de Carros Início -->
-        <section class="car-rentals-section section-padding fix">
-            <div class="container">
-                <div class="section-title text-center">
-                    <img src="{{ asset('assets/images/localiza.png ') }}" alt="icon-img" class="wow fadeInUp">
-                    <span class="wow fadeInUp" data-wow-delay=".2s">Confira nossos novos carros</span>
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">
-                        Carros que Estamos Oferecendo <br>
-                        para Aluguel
-                    </h2>
-                </div>
-            </div>
+<!-- Seção de Aluguel de Carros -->
+<section class="car-rentals-section section-padding fix">
+    <div class="container">
+        <div class="section-title text-center">
+            <img src="{{ asset('assets/images/localiza.png') }}" alt="icon-img" class="wow fadeInUp">
+            <span class="wow fadeInUp" data-wow-delay=".2s">Confira nossos novos carros</span>
+            <h2 class="wow fadeInUp" data-wow-delay=".4s">Carros que Estamos Oferecendo para Aluguel</h2>
+        </div>
+    </div>
 
-
-            <div class="swiper car-rentals-slider">
-                <div class="swiper-wrapper" id="car-list">
-                    @foreach($veiculos as $veiculo)
-                    <div class="swiper-slide">
-                        <div class="car-rentals-items">
-                            <div class="car-image">
-                                <img src="{{ asset('storage/' . $veiculo->imagem) }}" alt="{{ $veiculo->nome }}">
-                            </div>
-                            <div class="car-content">
-                                <div class="post-cat">
-                                    Modelo {{ $veiculo->ano }}
-                                </div>
-                                <div class="star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>2 Avaliações</span>
-                                </div>
-                                <h4><a href="#">{{ $veiculo->marca }} {{ $veiculo->modelo }}</a></h4>
-                                <h6>R$ {{ number_format($veiculo->valor_diaria, 2, ',', '.') }} <span>/ Dia</span></h6>
-                                <div class="icon-items">
-                                    <ul>
-                                        <li><img src="assets/site/img/car/seat.svg" alt="Assentos" class="me-1">{{ $veiculo->assentos}} Assentos</li>
-                                        <li><img src="assets/site/img/car/door.svg" alt="Portas" class="me-1"> {{ $veiculo->portas}}Portas</li>
-                                        <li>
-                                            <img src="assets/site/img/car/door.svg" alt="Portas" class="me-1">
-                                            {{ $veiculo->ar_condicionado == 1 ? 'Sim' : 'Não' }}
-                                        </li>
-
-                                    </ul>
-                                    <ul>
-                                        <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1"> Manual ou Automático</li>
-
-                                        <li><img src="assets/site/img/car/petrol.svg" alt="Gasolina" class="me-1"> {{ $veiculo->combustivel}}</li>
-                                    </ul>
-
-                                </div>
-                                <li><img src="assets/site/img/car/automatic.svg" alt="Automático" class="me-1">Garantia: R$ {{ $veiculo->caucao }}</li>
-                                @if(auth()->guard('clientes')->check())
-                                <!-- Usuário autenticado, pode acessar a página de aluguel -->
-                                <a href="{{ route('site.aluguel') }}" class="theme-btn bg-color w-100 text-center">Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                                @else
-                                <!-- Usuário não autenticado, redireciona para a página de login -->
-                                <a href="{{ route('site.viewlogin') }}" class="theme-btn bg-color w-100 text-center">Faça login para reservar <i class="fa-solid fa-arrow-right ps-1"></i></a>
-                                @endif
-                            </div>
-                        </div>
+    <div class="swiper car-rentals-slider">
+        <div class="swiper-wrapper" id="car-list">
+            @foreach($veiculos as $veiculo)
+            <div class="swiper-slide">
+                <div class="car-rentals-items">
+                    <div class="car-image">
+                        <img src="{{ asset('storage/' . $veiculo->imagem) }}" alt="{{ $veiculo->nome }}">
                     </div>
-                    @endforeach
-                </div>
-            </div>
-
-
-            </div>
-            </div>
-
-        </section>
-
-
-
-
-
-        <!-- Footer Section Start -->
-        <!-- Seção de Rodapé Início -->
-        <footer class="footer-section fix">
-            <div class="container">
-                <div class="footer-widgets-wrapper">
-                    <div class="row justify-content-between">
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="single-footer-widget shape-map">
-                                <div class="widget-head">
-                                    <h4>Contato</h4>
-                                </div>
-                                <div class="footer-content">
-                                    <p>
-                                        66 Road Broklyn Golden Street, 600
-                                        Nova York, EUA
-                                    </p>
-                                    <ul class="contact-info">
-                                        <li>
-                                            <i class="fa-regular fa-envelope"></i>
-                                            <a href="mailto:needhelp@company.com">needhelp@company.com</a>
-                                        </li>
-                                        <li>
-                                            <i class="fa-solid fa-phone-volume"></i>
-                                            <a href="tel:926668880000">+92 (666) 888 0000</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <div class="car-content">
+                        <div class="post-cat">Modelo {{ $veiculo->ano }}</div>
+                        <h4>{{ $veiculo->marca }} {{ $veiculo->modelo }}</h4>
+                        <h6>R$ {{ number_format($veiculo->valor_diaria, 2, ',', '.') }} <span>/ Dia</span></h6>
+                        <div class="icon-items">
+                            <ul>
+                                <li><img src="assets/site/img/car/seat.svg" alt="Assentos">{{ $veiculo->assentos }} Assentos</li>
+                                <li><img src="assets/site/img/car/door.svg" alt="Portas">{{ $veiculo->portas }} Portas</li>
+                                <li><img src="assets/site/img/car/ac.svg" alt="Ar Condicionado">{{ $veiculo->ar_condicionado ? 'Sim' : 'Não' }}</li>
+                            </ul>
                         </div>
-                        <div class="col-xl-2 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h4>Contato</h4>
-                                </div>
-                                <ul class="list-items">
-                                    <li>
-                                        <a href="#">
-                                            Sobre Nós
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Carros Novos
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Últimas Notícias
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Galeria
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Contato
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h4>Galeria</h4>
-                                </div>
-                                <div class="footer-gallery">
-                                    <div class="gallery-wrap">
-                                        <div class="gallery-item">
-                                            <div class="thumb">
-                                                <a href="assets/site/img/footer/gallery-1.jpg" class="img-popup">
-                                                    <img src="assets/site/img/footer/gallery-1.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="thumb">
-                                                <a href="assets/site/img/footer/gallery-2.jpg" class="img-popup">
-                                                    <img src="assets/site/img/footer/gallery-2.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="thumb">
-                                                <a href="assets/site/img/footer/gallery-3.jpg" class="img-popup">
-                                                    <img src="assets/site/img/footer/gallery-3.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="gallery-item">
-                                            <div class="thumb">
-                                                <a href="assets/site/img/footer/gallery-4.jpg" class="img-popup">
-                                                    <img src="assets/site/img/footer/gallery-4.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="thumb">
-                                                <a href="assets/site/img/footer/gallery-5.jpg" class="img-popup">
-                                                    <img src="assets/site/img/footer/gallery-5.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="thumb">
-                                                <a href="assets/site/img/footer/gallery-6.jpg" class="img-popup">
-                                                    <img src="assets/site/img/footer/gallery-6.jpg" alt="gallery-img">
-                                                    <div class="icon">
-                                                        <i class="far fa-plus"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h4>Newsletter</h4>
-                                </div>
-                                <div class="footer-content">
-                                    <p>Inscreva-se na nossa newsletter para receber nossas últimas atualizações e notícias</p>
-                                    <div class="footer-input">
-                                        <input type="email" id="email2" placeholder="Endereço de e-mail">
-                                        <button class="newsletter-btn" type="submit">
-                                            <i class="fa-regular fa-paper-plane"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="footer-wrapper">
-                        <p class="wow fadeInUp" data-wow-delay=".4s">
-                            © Copyright 2024 por <a href="#">TecWeb Digital</a>
-                        </p>
+                        <p>Garantia: R$ {{ number_format($veiculo->caucao, 2, ',', '.') }}</p>
+                        <a href="#" class="theme-btn bg-color w-100 text-center" 
+                           data-bs-toggle="modal" 
+                           data-bs-target="#modalAluguel" 
+                           onclick="openReserveModal({{ $veiculo->id }}, '{{ $veiculo->modelo }}', {{ $veiculo->valor_diaria }})">
+                            Reserve agora <i class="fa-solid fa-arrow-right ps-1"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </footer>
+            @endforeach
+        </div>
+    </div>
+</section>
 
+<!-- Modal de Aluguel -->
+<div class="modal fade" id="modalAluguel" tabindex="-1" aria-labelledby="modalAluguelLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAluguelLabel">Reservar Veículo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('site.aluguel.store') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="cliente_id" value="{{ auth()->guard('clientes')->id() }}">
+                    <input type="hidden" name="veiculo_id" id="veiculo_id">
+                    <input type="hidden" name="status" value="pendente">
 
-        </section>
+                    <div class="mb-3">
+                        <label for="veiculo_nome" class="form-label">Veículo</label>
+                        <input type="text" id="veiculo_nome" class="form-control" readonly>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="data_inicio" class="form-label">Data Início</label>
+                            <input type="date" name="data_inicio" id="data_inicio" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="data_fim" class="form-label">Data Fim</label>
+                            <input type="date" name="data_fim" id="data_fim" class="form-control" required>
+                        </div>
+                    </div>
 
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label for="valor_diaria" class="form-label">Valor Diária</label>
+                            <p id="valor_diaria" class="form-control-plaintext">R$ 0,00</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="valor_total" class="form-label">Valor Total</label>
+                            <p id="valor_total" class="form-control-plaintext">R$ 0,00</p>
+                        </div>
+                    </div>
 
-        <script src="{{ asset('assets/site/js/jquery-3.7.1.min.js') }}"></script>
-        <script src="{{ asset('assets/site/js/viewport.jquery.js') }}"></script>
-        <script src="{{ asset('assets/site/js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('assets/site/js/jquery.nice-select.min.js') }}"></script>
-        <script src="{{ asset('assets/site/js/jquery.waypoints.js') }}"></script>
-        <script src="{{ asset('assets/site/js/jquery.counterup.min.js') }}"></script>
-        <script src="{{ asset('assets/site/js/bootstrap-datepicker.js') }}"></script>
-        <script src="{{ asset('assets/site/js/swiper-bundle.min.js') }}"></script>
-        <script src="{{ asset('assets/site/js/jquery.meanmenu.min.js') }}"></script>
-        <script src="{{ asset('assets/site/js/jquery.magnific-popup.min.js') }}"></script>
-        <script src="{{ asset('assets/site/js/animation.js') }}"></script>
-        <script src="{{ asset('assets/site/js/wow.min.js') }}"></script>
-        <script src="{{ asset('assets/site/js/main.js') }}"></script>
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-success w-100">Confirmar Reserva</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-    </body>
+<style>
+    /* Customização para o modal */
+    #modalAluguel .modal-dialog {
+        margin-top: 5rem; /* Distância do topo */
+    }
+</style>
 
-</html>
+<script>
+    function openReserveModal(id, modelo, diaria) {
+        document.getElementById('veiculo_id').value = id;
+        document.getElementById('veiculo_nome').value = modelo;
+        document.getElementById('valor_diaria').innerText = `R$ ${diaria.toFixed(2)}`;
+        const calcularTotal = () => {
+            const inicio = new Date(document.getElementById('data_inicio').value);
+            const fim = new Date(document.getElementById('data_fim').value);
+            const dias = (fim - inicio) / (1000 * 3600 * 24) + 1;
+            document.getElementById('valor_total').innerText = `R$ ${(dias * diaria).toFixed(2)}`;
+        };
+        document.getElementById('data_inicio').addEventListener('change', calcularTotal);
+        document.getElementById('data_fim').addEventListener('change', calcularTotal);
+    }
+</script>
+@endsection

@@ -3,7 +3,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\Veiculo;
+use App\Models\Cliente;
+use App\Models\Aluguel;
 class DashboardController extends Controller
 {
     public function __construct()
@@ -13,11 +15,11 @@ class DashboardController extends Controller
 
     public function index()
     {
-        if (Auth::check()) {
-            return view('dashboard.index');
-        } else {
-            return redirect()->route('signin');
-        }
+        $totalVeiculos = Veiculo::count();
+        $totalClientes = Cliente::count();
+        $totalAlugueis = Aluguel::count();
+    
+        return view('dashboard.index', compact('totalVeiculos', 'totalClientes', 'totalAlugueis'));
     }
 
     public function index2()

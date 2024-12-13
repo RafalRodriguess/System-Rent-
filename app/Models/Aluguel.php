@@ -9,12 +9,12 @@ class Aluguel extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'veiculo_id', 'data_inicio', 'data_fim', 'status', 'valor_total'];
+    protected $fillable = ['cliente_id', 'veiculo_id', 'data_inicio', 'data_fim', 'status', 'valor_total'];
     protected $table = 'alugueis';
 
-    public function user()
+    public function cliente()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Cliente::class);
     }
 
     public function veiculo()
